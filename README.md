@@ -1,4 +1,4 @@
-# My Favorite Mushrooms
+# My Art and Photography website
 
 This project was made as part of my course at Hyper Island to learn CSS Responsive Web Design.
 
