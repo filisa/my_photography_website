@@ -46,6 +46,10 @@ body,html {
     font-weight: 220;
 }
 
+.top-navigation__menu-item:hover {
+    color: var(--light-brown-opaque);
+}
+
 #main_selected, #about_selected, #work_selected {
     color: var(--light-brown-opaque);
 }
@@ -69,6 +73,7 @@ body,html {
 .main-div {
     width: 100%;
 }
+
 .main-page__title {
     color: var(--pink);
     font-family: var(--main-font);
@@ -77,6 +82,19 @@ body,html {
     font-size: clamp(4rem, 5rem, 8rem);
     margin: 0;
     padding: 0 3vw;
+}
+
+@keyframes myAnimation {
+  0%   {color:var(--pink); left:0px; top:0px;}
+  25%  {color:yellow; left:200px; top:0px;}
+  50%  {color:blue; left:200px; top:200px;}
+  75%  {color:green; left:0px; top:200px;}
+  100% {color:red; left:0px; top:0px;}
+}
+
+.main-page__title:hover {
+    animation-name: myAnimation;
+    animation-duration: 2s;
 }
 
 .main-page__subtitle {
@@ -137,38 +155,50 @@ body,html {
 
 .work-page {
     background: black;
+    margin: 0;
+    padding: 0;
 }
 
 /* mobile photo gallery */
-@media (max-width:400px) {
+@media (max-width:450px) {
     .photo-grid {
     display: grid;
-    grid-template-columns: min-content;
+    grid-template-columns: 1fr;
     grid-template-rows: repeat(3, min-content);
-    gap: 1vw;
-    margin-top: 10vw;
+    gap: 0vw;
+    margin: 1vw;
     }
+
     .photo-grid_photo {
-    width: 100vw;
+    max-width: 100vw;
+    min-width: 10vw;
+
     }
     /* the long images don't look good on mobile, so I will hide it */
     .span-2-rows {
         display: none;
     }
+
 }
 
 /* desktop photo gallery */
-@media (min-width:401px) {
+@media (min-width:450px) {
     .photo-grid {
-        margin: 10vw 1vw;
+        padding-top: 5vw;
+        margin: 0;
         display: grid;
-        grid-template-columns: repeat(3, min-content);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, min-content);
-        gap: 1vw;
+        gap: 3vw;
     }
     .photo-grid_photo {
-        width: clamp(200px, 31.9vw, 31.9vw);
-        height: auto;
+        width: clamp(200px, 31.9vw, 30vw);
+        border-radius: 20px;
+    }
+
+    .photo-grid_photo:hover {
+        transform: scale(1.05, 1.05);
+        transition: transform 1s;
     }
     .span-2-rows {
         grid-row: span 2;
