@@ -72,14 +72,6 @@ body,html {
 
 .main-div {
     width: 100%;
-
-    p {
-        color: rgba(179, 176, 171, 0.627);
-        font-family: var(--main-font);
-        font-size: 0.5em;
-        margin: 0;
-        padding: 0 3vw;
-    }
 }
 
 .main-page__title {
@@ -98,6 +90,14 @@ body,html {
     text-shadow: black 1px 0 10px;
     font-weight: 210;
     font-size: 2rem;
+    margin: 0;
+    padding: 0 3vw;
+}
+
+.main-page__paragraph {
+    color: rgba(179, 176, 171, 0.627);
+    font-family: var(--main-font);
+    font-size: 0.5em;
     margin: 0;
     padding: 0 3vw;
 }
@@ -250,5 +250,23 @@ body,html {
 
     .art-page__painting:hover {
         transform: rotate(1.6deg);
+    }
+}
+
+
+footer {
+    margin: 0;
+    height: 2vw;
+    position: fixed;
+    bottom: 0;
+    right: 100;
+    padding-left: 1vw;
+    font-size: 0.2em;
+    background-color: var(--almost-black);
+    width: 100%;
+    color: rgb(159, 153, 153);
+
+    a {
+        color: rgb(159, 153, 153);
     }
 }
