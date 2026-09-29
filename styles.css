@@ -12,9 +12,9 @@ body,html {
 
 /* design system:) */
 :root {
-    --pink: #e2a9f1;
-    --light-brown: #8062478f;
-    --light-brown-opaque: #806247;
+    --green: rgb(117, 191, 92);
+    --light-brown: #806247b9;
+    --light-brown-opaque: #a17a58;
     --light-grey: #c4c2bf;
     --brown: #332925;
     --transparent-grey: #716c6499;
@@ -63,7 +63,7 @@ body,html {
         linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
         url("/images/DSCF5990.JPG"),
         black;
-    background-size: auto, auto, cover;
+    background-size: auto, auto, cover; 
     background-position: center;
     background-repeat: no-repeat;
     margin: 0;
@@ -83,9 +83,9 @@ body,html {
 }
 
 .main-page__title {
-    color: var(--pink);
+    color: var(--green);
     font-family: var(--main-font);
-    text-shadow: black 1px 2px 7px;
+    text-shadow: black 1px 1px 10px;
     font-weight: 210;
     font-size: clamp(4rem, 5rem, 8rem);
     margin: 0;
@@ -212,5 +212,43 @@ body,html {
 .art-page {
     margin: 0;
     padding: 0;
-    background-color: var(--almost-black);
+    background-color: var(--almost-black)
+}
+
+/* mobile */
+@media (max-width:450px) {
+    .art-page__container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .art-page__painting {
+        width: 93%;
+        padding: 5vw 3vw;
+        border-radius: 20px;
+        scale: 0.95;
+    }
+}
+
+/* desktop */
+
+@media (min-width:450px) {
+    .art-page__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex-basis: 30%;
+    }
+
+    .art-page__painting {
+        height: 30vw;
+        padding: 10px;
+        border-radius: 25px;
+    }
+
+    .art-page__painting:hover {
+        transform: rotate(1.6deg);
+    }
 }
