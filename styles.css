@@ -72,6 +72,14 @@ body,html {
 
 .main-div {
     width: 100%;
+
+    p {
+        color: rgba(179, 176, 171, 0.627);
+        font-family: var(--main-font);
+        font-size: 0.5em;
+        margin: 0;
+        padding: 0 3vw;
+    }
 }
 
 .main-page__title {
@@ -82,19 +90,6 @@ body,html {
     font-size: clamp(4rem, 5rem, 8rem);
     margin: 0;
     padding: 0 3vw;
-}
-
-@keyframes myAnimation {
-  0%   {color:var(--pink); left:0px; top:0px;}
-  25%  {color:yellow; left:200px; top:0px;}
-  50%  {color:blue; left:200px; top:200px;}
-  75%  {color:green; left:0px; top:200px;}
-  100% {color:red; left:0px; top:0px;}
-}
-
-.main-page__title:hover {
-    animation-name: myAnimation;
-    animation-duration: 2s;
 }
 
 .main-page__subtitle {
@@ -154,7 +149,7 @@ body,html {
 /*Work page */
 
 .work-page {
-    background: black;
+    background: var(--almost-black);
     margin: 0;
     padding: 0;
 }
@@ -212,3 +207,10 @@ body,html {
 
 
 /*Work page */
+
+/* Art page */
+.art-page {
+    margin: 0;
+    padding: 0;
+    background-color: var(--almost-black);
+}
