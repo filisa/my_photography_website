@@ -14,6 +14,7 @@ body,html {
 :root {
     --pink: #e2a9f1;
     --light-brown: #8062478f;
+    --light-brown-opaque: #806247;
     --light-grey: #c4c2bf;
     --brown: #332925;
     --transparent-grey: #716c64;
@@ -23,20 +24,7 @@ body,html {
     --main-font: "big_shoulders";
 }
 
-/* Main page*/
-/* Main page background */
-.main-page {
-    background:
-        var(--gradient-yellow-blue),
-        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        url("/images/DSCF5990.JPG"),
-        black;
-    background-size: auto, auto, cover;
-    background-position: center;
-    margin: 0;
-    padding: 0;
-}
-
+/* TOP NAV */
 /* Top nav styles are shared across all pages*/
 .top-navigation {
     display: flex;
@@ -48,7 +36,7 @@ body,html {
 }
 
 .top-navigation__menu-item {
-    font-family: var(--main-font),Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: var(--main-font), Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: var(--light-brown);
     font-size: 2rem;
     margin: 0;
@@ -56,6 +44,46 @@ body,html {
     text-decoration: none;
     font-weight: 220;
 }
+
+#main_selected, #about_selected, #work_selected {
+    color: var(--light-brown-opaque);
+}
+
+/* Main page*/
+
+/* Main page background */
+.main-page {
+    background:
+        var(--gradient-yellow-blue),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
+        url("/images/DSCF5990.JPG"),
+        black;
+    background-size: auto, auto, cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main-page__title {
+    color: var(--pink);
+    font-family: var(--main-font), Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 1px 2px 7px;
+    font-weight: 210;
+    font-size: 6rem;
+    margin: 0;
+    padding: 0 3vw;
+}
+
+.main-page__subtitle {
+    color: var(--light-grey);
+    font-family: var(--main-font), Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: black 1px 0 10px;
+    font-weight: 210;
+    font-size: 2rem;
+    margin: 0;
+    padding: 0 3vw;
+}
+
 /* Main page*/
 
 
@@ -63,9 +91,12 @@ body,html {
 .about-page {
     background: black;
 }
+/* About page*/
 
-/* Work page*/
+
+/*Work page */
 
 .work-page {
     background: black;
 }
+/*Work page */
