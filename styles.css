@@ -33,6 +33,7 @@ body,html {
     margin: 0;
     padding: 0 10vw;
     background-color: var(--almost-black);
+    width: viewport;
 }
 
 .top-navigation__menu-item {
@@ -65,12 +66,15 @@ body,html {
     padding: 0;
 }
 
+.main-div {
+    width: 100%;
+}
 .main-page__title {
     color: var(--pink);
     font-family: var(--main-font);
     text-shadow: black 1px 2px 7px;
     font-weight: 210;
-    font-size: 6rem;
+    font-size: clamp(4rem, 5rem, 8rem);
     margin: 0;
     padding: 0 3vw;
 }
@@ -154,18 +158,17 @@ body,html {
 }
 
 /* desktop photo gallery */
-@media (min-width:400px) {
+@media (min-width:401px) {
     .photo-grid {
+        margin: 10vw 1vw;
         display: grid;
         grid-template-columns: repeat(3, min-content);
         grid-template-rows: repeat(3, min-content);
         gap: 1vw;
-        margin-top: 10vw;
     }
     .photo-grid_photo {
-        width: clamp(200px, 30vw, 30vw);
+        width: clamp(200px, 31.9vw, 31.9vw);
         height: auto;
-
     }
     .span-2-rows {
         grid-row: span 2;
