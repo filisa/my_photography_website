@@ -134,4 +134,48 @@ body,html {
 .work-page {
     background: black;
 }
+
+/* mobile photo gallery */
+@media (max-width:400px) {
+    .photo-grid {
+    display: grid;
+    grid-template-columns: min-content;
+    grid-template-rows: repeat(3, min-content);
+    gap: 1vw;
+    margin-top: 10vw;
+    }
+    .photo-grid_photo {
+    width: 100vw;
+    }
+    /* the long images don't look good on mobile, so I will hide it */
+    .span-2-rows {
+        display: none;
+    }
+}
+
+/* desktop photo gallery */
+@media (min-width:400px) {
+    .photo-grid {
+        display: grid;
+        grid-template-columns: repeat(3, min-content);
+        grid-template-rows: repeat(3, min-content);
+        gap: 1vw;
+        margin-top: 10vw;
+    }
+    .photo-grid_photo {
+        width: clamp(200px, 30vw, 30vw);
+        height: auto;
+
+    }
+    .span-2-rows {
+        grid-row: span 2;
+    }
+
+    .span-2-columns {
+        grid-column: span 2;
+        width: 100%;
+    }
+}
+
+
 /*Work page */
