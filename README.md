@@ -1,8 +1,8 @@
-# My Art and Photography website
+# My Art and Photography webs
 
 This project was made as part of my course at Hyper Island to learn CSS Responsive Web Design.
 
-**Live site:** [my-fav-mushrooms.netlify.app](https://my-art-and-photography.netlify.app/)
+**Live site:** [https://my-art-and-photography.netlify.app/](https://my-art-and-photography.netlify.app/)
 
 ## Overview
 
@@ -13,8 +13,7 @@ This is a front-end website about my art and photography. It is responsive and i
 
 The website is deployed with Netlify and is available at:
 
-[https://my-fav-mushrooms.netlify.app/](https://my-fav-mushrooms.netlify.app/)
-
+**Live site:** [https://my-art-and-photography.netlify.app/](https://my-art-and-photography.netlify.app/)
 
 
 ## Author
