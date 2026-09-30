@@ -22,6 +22,7 @@ body,html {
     --almost-black: rgb(23, 22, 22);
     --gradient-yellow-blue: linear-gradient(45deg, #000b2133, #003f8233, #4ca2b533, #ffd27f33);
     --main-font: "big_shoulders", Impact, Haettenschweiler, 'Arial Narrow Bold';
+    --page-animation: fade-from-black 0.5s ease-out;
 }
 
 /* TOP NAV */
@@ -68,6 +69,7 @@ body,html {
     background-repeat: no-repeat;
     margin: 0;
     padding: 0;
+    animation: var(--page-animation);
 }
 
 .main-div {
@@ -109,11 +111,17 @@ body,html {
 .about-page {
     background: 
         linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
-        url("/images/DSCF6088.JPG");
+        url("/images/DSCF6088.JPG"),
+        var(--almost-black);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    
+    animation: var(--page-animation);
+}
+
+@keyframes fade-from-black {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
 
 
@@ -152,6 +160,7 @@ body,html {
     background: var(--almost-black);
     margin: 0;
     padding: 0;
+    animation: var(--page-animation);
 }
 
 /* mobile photo gallery */
@@ -167,7 +176,6 @@ body,html {
     .photo-grid_photo {
     max-width: 100vw;
     min-width: 10vw;
-
     }
     /* the long images don't look good on mobile, so I will hide it */
     .span-2-rows {
@@ -189,11 +197,11 @@ body,html {
     .photo-grid_photo {
         width: clamp(200px, 31.9vw, 30vw);
         border-radius: 20px;
+        transition: transform 0.5s ease; /*so it doesn't snap back*/
     }
 
     .photo-grid_photo:hover {
         transform: scale(1.05, 1.05);
-        transition: transform 1s;
     }
     .span-2-rows {
         grid-row: span 2;
@@ -212,7 +220,8 @@ body,html {
 .art-page {
     margin: 0;
     padding: 0;
-    background-color: var(--almost-black)
+    background-color: var(--almost-black);
+    animation: var(--page-animation);
 }
 
 /* mobile */
@@ -270,3 +279,13 @@ footer {
         color: rgb(159, 153, 153);
     }
 }
+
+/* accessibility */
+
+ @media (prefers-reduced-motion: reduce) 
+    { 
+        .main-page { animation: none; } 
+        .art-page { animation: none; } 
+        .work-page { animation: none; }
+        .about-page { animation: none; } 
+    }
