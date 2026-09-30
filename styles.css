@@ -7,7 +7,7 @@ body,html {
 
 @font-face {
     font-family: "big_shoulders";
-    src: url("/fonts/Big_Shoulders/BigShoulders-VariableFont_opsz,wght.ttf");
+    src: url("fonts/Big_Shoulders/BigShoulders-VariableFont_opsz,wght.ttf");
 }
 
 /* design system:) */
@@ -34,7 +34,6 @@ body,html {
     margin: 0;
     padding: 0 10vw;
     background-color: var(--almost-black);
-    width: viewport;
 }
 
 .top-navigation__menu-item {
@@ -62,7 +61,7 @@ body,html {
     background:
         var(--gradient-yellow-blue),
         linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
-        url("/images/DSCF5990.JPG"),
+        url("images/DSCF5990.JPG"),
         black;
     background-size: auto, auto, cover; 
     background-position: center;
@@ -81,7 +80,7 @@ body,html {
     font-family: var(--main-font);
     text-shadow: black 1px 1px 10px;
     font-weight: 210;
-    font-size: clamp(4rem, 5rem, 8rem);
+    font-size: clamp(4rem, 8vw, 8rem);
     margin: 0;
     padding: 0 3vw;
 }
@@ -111,7 +110,7 @@ body,html {
 .about-page {
     background: 
         linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)),
-        url("/images/DSCF6088.JPG"),
+        url("images/DSCF6088.JPG"),
         var(--almost-black);
     background-size: cover;
     background-position: center;
@@ -149,8 +148,8 @@ body,html {
     font-family: var(--main-font);
     font-weight: 200;
     height: 100%;
-    width: clamp (5vw 30vw 50%);
-    margin-left: clamp (5vw 20vw 15vw);
+    width: clamp (5vw, 30vw, 50%);
+    margin-left: clamp (5vw, 20vw, 15vw);
     min-width: 150px;
 }
 
@@ -288,4 +287,4 @@ footer {
         .art-page { animation: none; } 
         .work-page { animation: none; }
         .about-page { animation: none; } 
-    }
+    }   
